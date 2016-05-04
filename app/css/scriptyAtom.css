@@ -1,0 +1,108 @@
+/***************************************/
+/***** OPÇÕES DEFAULT SITE CONFIG ******/
+/***************************************/
+
+p    {margin:0px;}
+h4   {color: #ccc;}
+body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
+
+
+/***************************************/
+/***** OPÇÕES DEFAULT UTILITÁRIOS ******/
+/***************************************/
+
+.nopadding-l{ padding-left:0px;padding-right:0px; }
+.nopadding-h{ padding-top:0px;padding-bottom: 0px;}
+
+.nomargin-l{ margin-left:0px;margin-right:0px; }
+.nomargin-h{ margin-top:0px;margin-bottom:0px; }
+
+.pdg-top5 {padding-top:  5px;}
+.pdg-top10{padding-top: 10px;}
+.pdg-top15{padding-top: 15px;}
+.pdg-top20{padding-top: 20px;}
+
+/***************************************/
+/***** OPÇÕES DEFAULT INDEX BOXES ******/
+/***************************************/
+
+.header-menu{
+	z-index: 10;
+	color: #ccc;
+	height: 100px;
+	position:fixed;
+	border-top: 3px solid #B78F66;
+	background-image: url(../img/pattern.png);
+}
+
+.fixermenu{
+	height:100px;
+}
+
+.pagBox-index{
+	min-height: 230px;
+	background-color: #2C2E2F;
+	background-image: url(../img/pattern.png);
+}
+
+.pagBox-initial{
+	color:#999;
+	min-height: 665px;
+	background-color:#4D4E4F;
+	background-image: url(../img/pattern.png);
+}
+
+.logo-quemsomos{
+	height:150px;
+}
+
+#mapa{ 
+  height: 250px; 
+  border: 1px solid #ccc;
+}
+
+
+/***************************************/
+/**** OPÇÕES DEFAULT BANNER CONTENT ****/
+/***************************************/
+
+.district{
+	margin-top: -30px;
+	height: 32px;
+	border-bottom:3px solid #B78F66;
+}
+
+.seta{ 
+	border-right: 50px solid transparent; 
+	border-bottom: 30px solid #2C2E2F;
+	opacity: 0.7;
+}
+.seta1{ 
+	border-left: 50px solid transparent; 
+	border-bottom: 30px solid #2C2E2F;
+	opacity: 0.7;
+}
+
+/***************************************/
+/***** OPÇÕES DEFAULT BUTTONS ******/
+/***************************************/
+
+.simple-button{
+	cursor:pointer;
+	padding: 30px 45px;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 0px;
+	transition: color 0.5s;
+} 
+
+.simple-button:hover{ color: #5F5F5F; }
+
+.button-large{ padding: 30px 20px; }
+
+/***************************************/
+/***** OPÇÕES DEFAULT CORES ******/
+/***************************************/ 
+
+.cinza-escuro{ background-color:#2C2E2F; }
+.laranja-claro{	background-color:#B78F66; }

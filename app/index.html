@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html ng-app="transfferApp">
+	<head>
+		<title>Transffer Executivo</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/scriptyAtom.css" />
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+
+		<!-- BIBLIOTECAS DEPENDENCIAS -->
+		<script src="lib/jquery/dist/jquery.min.js"></script>
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+		<!-- ANGULAR CONTROLLERS -->
+		<script src="javascript/transfferApp.js"></script>
+		<script src="javascript/routes.js"></script>
+
+		<!-- CONTROLLERS -->
+		<script src="javascript/controllers/indexCtrl.js"></script>
+		
+	</head>
+
+	<body ng-controller="indexController"  id="home" >
+		<div class="header-menu cinza-escuro nopadding-l col-center col-lg-12">
+		    <div class="menu-information col-lg-6">
+				<div class="col-lg-12">
+					<img src="img/logo.png" alt="Logo-menu">
+				</div>
+			</div>
+			<div class="col-lg-6" id="navbar">
+				<div ui-sref="home" class="simple-button align-center col-lg-3">
+					<p>Home</p>
+				</div>
+				<div ui-sref="quem-somos" class="button-large simple-button align-center col-lg-3">
+					<p>Sobre nós</p>
+				</div>
+				<div ui-sref="frota" class="simple-button align-center col-lg-3">
+					<p>Frota</p>
+				</div>							
+				<div ui-sref="contate-nos" class="button-large simple-button align-center col-lg-3">
+					<p>Fale conosco</p>
+				</div>
+			</div>
+		</div>	
+		
+		<div class="nopadding-l fixermenu col-lg-12"></div>
+
+		<div ui-view="scopeSlide" class="nopadding-l col-lg-12"></div>
+		
+		<div class="pagBox-index col-lg-12"></div>
+
+		<div class="nopadding-l pagBox-initial col-lg-12" id="quemsomos">
+			<div class="fixermenu col-lg-12"></div>
+			<div class="container">	
+				<div class="col-lg-12 pdg-top20">
+					<div class="row">
+						<h1>Sobre nós</h1>
+						<h4>A TRANSFFER é uma com mais de 30 anos de serviços prestados no ramode transporte de passageiros, com qualidade, pontualidade e baixo custo atuando com destino para qualquer local do país.</h4>
+					</div>
+				</div>
+				<div class="col-lg-6 pdg-top10">
+					<div class="row">
+						<h1>Missão</h1>
+						<h4>Satisfação de nossos clientes com qualidade e baixo custo.</h4>
+					</div>
+					<div class="row pdg-top10">	
+						<h1>Serviços</h1>
+						<h4>Alguns dos serviços oferecidos pela TRANS FFER são:</h4>
+						<ul>
+							<li>Transportes de Funcionários.</li>
+							<li>Transportes de Carga</li>
+							<li>Traslados (Aeroportos, portos, etc.);</li>
+							<li>Deslocamento com Vans;</li>
+							<li>Serviço de Transporte Executivo;</li>
+							<li>Elaboração de itinerários, entre outros;</li>
+							<li>Atendimento 24hs;</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6 logo-quemsomos">
+					<div class="row">
+						<img src="img/logo.png" alt="Logo-quemsomos">
+					</div>
+				</div>												
+			</div>
+		</div>
+
+		<div class="nopadding-l pagBox-initial col-lg-12" id="frota">
+			<div class="fixermenu col-lg-12"></div>
+			<h1>FROTA</h1>
+		</div>
+
+		<div class="nopadding-l pagBox-initial col-lg-12" id="contact">
+			<div class="fixermenu col-lg-12"></div>
+			<div class="container">
+				<div class="col-lg-6 pdg-top20">
+					<div class="row">
+						<h1>Telefones</h1>
+						<h4>(12) 3958-3447 24hs de Segunda a Domingo.</h4>
+					</div>
+
+					<div class="row pdg-top20">
+						<h1>Email para agendamento</h1>
+						<h4>agendamento@transffer.com.br</h4>
+					</div>
+					
+					<div class="row pdg-top20">
+						<div id="mapa"></div>
+					</div>	
+				</div>
+				<div class="col-lg-6 pdg-top20">
+					<div class="row">
+						<h1>Fale com nossa central 24hrs</h1>
+					</div>					
+				</div>									
+			</div>	
+		</div>		
+
+		<div class="footer"></div>
+	</body>
+</html>
+
