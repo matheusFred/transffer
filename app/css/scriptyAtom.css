@@ -54,6 +54,7 @@ body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
 
 .logo-quemsomos{
 	height:150px;
+	border: 1px solid #ccc;
 }
 
 #mapa{ 
@@ -101,8 +102,20 @@ body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
 .button-large{ padding: 30px 20px; }
 
 /***************************************/
-/***** OPÇÕES DEFAULT CORES ******/
+/******** OPÇÕES DEFAULT CORES *********/
 /***************************************/ 
 
 .cinza-escuro{ background-color:#2C2E2F; }
 .laranja-claro{	background-color:#B78F66; }
+
+
+/***************************************/
+/************* ESPECIFICAS *************/
+/***************************************/ 
+div#contact i{ text-align:center; }
+div#contact i.fa {
+    width: 100%;
+    color: #2C2E2F;
+	font-size: 65px;
+	display: inline-block;
+}
