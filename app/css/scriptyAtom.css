@@ -1,15 +1,16 @@
-/***************************************/
-/***** OPÇÕES DEFAULT SITE CONFIG ******/
-/***************************************/
+			/***************************************/
+			/***** OPÇÕES DEFAULT SITE CONFIG ******/ 
+			/***************************************/
 
-p    {margin:0px;}
+p    {margin:0px;color: #ccc;}
+h1   {color: #999;}
 h4   {color: #ccc;}
 body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
 
 
-/***************************************/
-/***** OPÇÕES DEFAULT UTILITÁRIOS ******/
-/***************************************/
+			/***************************************/
+			/***** OPÇÕES DEFAULT UTILITÁRIOS ******/
+			/***************************************/
 
 .nopadding-l{ padding-left:0px;padding-right:0px; }
 .nopadding-h{ padding-top:0px;padding-bottom: 0px;}
@@ -21,40 +22,32 @@ body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
 .pdg-top10{padding-top: 10px;}
 .pdg-top15{padding-top: 15px;}
 .pdg-top20{padding-top: 20px;}
+.pdg-top40{padding-top: 40px;}
 
-/***************************************/
-/***** OPÇÕES DEFAULT INDEX BOXES ******/
-/***************************************/
+			/***************************************/
+			/***** OPÇÕES DEFAULT PAGE BOXES ******/
+			/***************************************/
 
 .header-menu{
 	z-index: 10;
-	color: #ccc;
 	height: 100px;
 	position:fixed;
 	border-top: 3px solid #B78F66;
 	background-image: url(../img/pattern.png);
 }
 
-.fixermenu{
-	height:100px;
-}
-
 .pagBox-index{
 	min-height: 230px;
-	background-color: #2C2E2F;
 	background-image: url(../img/pattern.png);
 }
 
-.pagBox-initial{
-	color:#999;
+.pagBox-common{
 	min-height: 665px;
-	background-color:#4D4E4F;
 	background-image: url(../img/pattern.png);
 }
 
-.logo-quemsomos{
-	height:150px;
-	border: 1px solid #ccc;
+.fixermenu{
+	height:100px;
 }
 
 #mapa{ 
@@ -63,9 +56,9 @@ body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
 }
 
 
-/***************************************/
-/**** OPÇÕES DEFAULT BANNER CONTENT ****/
-/***************************************/
+			/***************************************/
+			/**** OPÇÕES DEFAULT BANNER CONTENT ****/
+			/***************************************/
 
 .district{
 	margin-top: -30px;
@@ -84,9 +77,9 @@ body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
 	opacity: 0.7;
 }
 
-/***************************************/
-/***** OPÇÕES DEFAULT BUTTONS ******/
-/***************************************/
+			/***************************************/
+			/*****   OPÇÕES DEFAULT BUTTONS   ******/
+			/***************************************/
 
 .simple-button{
 	cursor:pointer;
@@ -101,10 +94,11 @@ body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
 
 .button-large{ padding: 30px 20px; }
 
-/***************************************/
-/******** OPÇÕES DEFAULT CORES *********/
-/***************************************/ 
+			/***************************************/
+			/******** OPÇÕES DEFAULT CORES *********/
+			/***************************************/ 
 
+.cinza-claro{ background-color:#4D4E4F; }
 .cinza-escuro{ background-color:#2C2E2F; }
 .laranja-claro{	background-color:#B78F66; }
 
@@ -112,10 +106,22 @@ body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
 /***************************************/
 /************* ESPECIFICAS *************/
 /***************************************/ 
-div#contact i{ text-align:center; }
-div#contact i.fa {
+div#faleconosco i { text-align:center; }
+
+div#homeicons i.fa {
+    color: #ccc;
+	font-size: 150px;
+	display: inline-block;
+}
+
+div#faleconosco i.fa {
     width: 100%;
     color: #2C2E2F;
 	font-size: 65px;
 	display: inline-block;
+}
+
+div#sobrenos ul{
+	color: #ccc;
+	font-size:17px;
 }

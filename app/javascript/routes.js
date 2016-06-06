@@ -31,14 +31,14 @@ myVariableApp.config(function($stateProvider) {
             })
         }
     })
-    .state('quem-somos', {
-      url: "/quemsomos",
+    .state('sobre-nos', {
+      url: "/sobre-nos",
       views: {
         "scopeSlide": { templateUrl: 'templates/slide.html' },
       },
         onEnter: function () {            
             $('html, body').animate({
-                scrollTop: $("#quemsomos").offset().top
+                scrollTop: $("#sobrenos").offset().top
             })
         }
     })
@@ -53,14 +53,14 @@ myVariableApp.config(function($stateProvider) {
             })
         }
     })
-    .state('contate-nos', {
-      url: "/contato",
+    .state('fale-conosco', {
+      url: "/fale-conosco",
       views: {
         "scopeSlide": { templateUrl: 'templates/slide.html' },
       },
         onEnter: function () {            
             $('html, body').animate({
-                scrollTop: $("#contact").offset().top
+                scrollTop: $("#faleconosco").offset().top
             })
         }
     })    
