@@ -3,12 +3,13 @@ TRANSFFER
 
 #### Description
 ######Site and system TRANSFFER. (transportadora exutiva) 
+#######Single page application system.
 
 #### Using languages
-######{HTML - CSS - JS - PHP}
+######{HTML - CSS}
 
 #### Technologies Front
-######{BOWER - GRUNT - BOOTSTRAP - JQUERY - ANGULARJS - UI.ROUTE}
+######{GRUNT - BOOTSTRAP - JQUERY - ANGULARJS - UI.ROUTE}
 
 ==========
 
