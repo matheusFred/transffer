@@ -1,16 +1,22 @@
-<!DOCTYPE html>
 <html ng-app="transfferApp">
 	<head>
 		<title>Transffer Executivo</title>
 		<!-- CSS -->
-		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/scriptyAtom.css" />
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="lib/angular-carousel/dist/angular-carousel.min.css"  type="text/css" />
 
 		<!-- BIBLIOTECAS DEPENDENCIAS -->
 		<script src="lib/jquery/dist/jquery.min.js"></script>
-		<script src="lib/angular/angular.min.js"></script>
 		<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script async defer 
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARwFYwR7qYJMbMkxOwFszkUNBTAH_WDBI&callback=initMap">
+		</script>
+
+		<script src="lib/angular/angular.min.js"></script>
+		<script src="lib/angular-touch/angular-touch.js"></script>
+		<script src="lib/angular-carousel/dist/angular-carousel.js"></script>	
 		<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 		<!-- ANGULAR CONTROLLERS -->
@@ -18,145 +24,257 @@
 		<script src="javascript/routes.js"></script>
 
 		<!-- CONTROLLERS -->
-		<script src="javascript/controllers/indexCtrl.js"></script>
-		
+		<script src="javascript/controllers/indexController.js"></script>	
 	</head>
 
-	<body ng-controller="indexController"  id="home" >
+	<body ng-controller="indexCtrl"  id="home" >
 		<!-- MENU -->
-		<div class="header-menu cinza-escuro nopadding-l col-center col-lg-12">
-		    <div class="menu-information col-lg-6">
-				<div class="col-lg-12">
-					<img src="img/logo.png" alt="Logo-menu">
-				</div>
+		<div class="header-menu pdg-top5 cinza-claro nopadding-l col-md-12 col-sm-12 col-lg-12">
+		    <div class="header-logo col-lg-6 col-sm-6" id="logo">
+	    		<div class="row">
+	    			<img src="img/logo.png" alt="Logo-menu">
+	    		</div>
 			</div>
-			<div class="col-lg-6" id="navbar">
-				<div ui-sref="home" class="simple-button align-center col-lg-3">
-					<p>Home</p>
-				</div>
-				<div ui-sref="sobre-nos" class="button-large simple-button align-center col-lg-3">
-					<p>Sobre nós</p>
-				</div>
-				<div ui-sref="frota" class="simple-button align-center col-lg-3">
-					<p>Frota</p>
-				</div>							
-				<div ui-sref="fale-conosco" class="button-large simple-button align-center col-lg-3">
-					<p>Fale conosco</p>
-				</div>
+			<div class="col-lg-6 col-sm-6 col-md-6" id="navbar">
+				<div class="row align-center">
+					<div class="simple-button col-lg-3 col-sm-3" ui-sref="home">
+						<h4>Home</h4>
+					</div>
+					<div class="simple-button col-lg-3 col-sm-3" ui-sref="sobre-nos">
+						<h4>Sobre nós</h4>
+					</div>
+					<div class="simple-button col-lg-3 col-sm-3" ui-sref="frota">
+						<h4>Frota</h4>
+					</div>							
+					<div class="simple-button col-lg-3 col-sm-3" ui-sref="fale-conosco">
+						<h4>Fale conosco</h4>
+					</div>
+				</div>	
 			</div>
 		</div>	
 		
 		<!-- FIXER MENU / SLIDE -->
-		<div class="nopadding-l fixermenu col-lg-12"></div>
-		<div ui-view="scopeSlide" class="nopadding-l col-lg-12"></div>
+		<div class="nopadding-l fixermenu col-lg-12 col-sm-12 col-md-12"></div>
+	
+		<!-- SLIDE SHOW HOME -->
+		<div class="nopadding col-lg-12">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="img/slide/fundoslide.jpg">
+					</div>
+					<div class="item">
+						<img src="img/slide/fundoslide3.jpg">
+					</div>
+				</div>
+
+				<div class="curtain-slide nopadding col-lg-12 col-sm-12 col-md-12">		
+					<div class="col-lg-6 col-sm-6 col-md-6 curtain-left"></div>
+					<div class="col-lg-6 col-sm-6 col-md-6 curtain-right"></div>
+				</div>	
+			</div>			
+		</div>
 	
 		<!-- HOME-ICONS -->
-		<div class="pagBox-index cinza-escuro col-lg-12" id="homeicons">
-
-			<span class="fa-stack fa-5x">
-			  <i class="fa fa-circle fa-stack-2x icon-background5"></i>
-			  <i class="fa fa-camera fa-stack-1x"></i>
-			</span>
-		
-			<div class="pdg-top40 col-lg-4">
-				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+		<div class="pagBox-index cinza-claro col-lg-12" id="homeicons">
+			<div class="col-lg-12">
+				<div class="row">
+					<h1>Seja bem vindo a TransFFer, transporte executivo:</h1>
+				</div>
 			</div>
-			<div class="pdg-top40 col-lg-4">
-				<i class="fa fa-envelope-o" aria-hidden="true"></i>
-			</div>			
+			<div class="col-lg-12">
+				<div class="row pdg-top20">
+					<div class="col-lg-4 col-sm-4 col-md-4" ui-sref="sobre-nos">
+						<i class="fa fa-users" aria-hidden="true"></i>
+					</div>
+
+					<div class="col-lg-4 col-sm-4 col-md-4" ui-sref="frota">
+						<i class="fa fa-car" aria-hidden="true"></i>
+					</div>
+
+					<div class="col-lg-4 col-sm-4 col-md-4" ui-sref="fale-conosco">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>	
+					</div>					
+				</div>
+			</div>				
 		</div>
 
 		<!-- PAG SOBRE NÓS -->
-		<div class="pagBox-common nopadding-l cinza-claro col-lg-12" id="sobrenos">
-			<div class="fixermenu col-lg-12"></div>
-			<div class="container">	
-				<div class="pdg-top10 col-lg-6">
-					<div class="row">
-						<h1>Sobre nós</h1>
-						<h4>A TRANS FFER é uma empresa com mais de 30 anos de serviços prestados no ramo de transporte de passageiros, com qualidade, pontualidade e baixo custo atuando com destino para qualquer local do país.</h4>
-					</div>
+		<div class="pagBox-default nopadding-l cinza-escuro col-lg-12" id="sobrenos">
+			<div class="container">
+				<div class="fixermenu col-lg-12 col-sm-12 col-md-12 nopadding">
+					<div class="fixerseta col-lg-6 col-sm-6 col-md-6"></div>
+					<div class="fixerseta1 col-lg-6 col-sm-6 col-md-6"></div>
+				</div>	
 
-					<div class="row">
-						<h1>Missão</h1>
-						<h4>Satisfação de nossos clientes com qualidade e baixo custo.</h4>
-					</div>
-
-					<div class="row pdg-top10">	
-						<h1>Serviços</h1>
-						<h4>Alguns dos serviços oferecidos pela TRANS FFER são:</h4>
-						<ul>
-							<li>Transportes de Funcionários.</li>
-							<li>Transportes de Carga</li>
-							<li>Traslados (Aeroportos, portos, etc.);</li>
-							<li>Deslocamento com Vans;</li>
-							<li>Serviço de Transporte Executivo;</li>
-							<li>Elaboração de itinerários, entre outros;</li>
-							<li>Atendimento 24hs;</li>
-						</ul>
-					</div>
+				<div class="row pdg-top40">
+					<h1>Sobre nós</h1>
 				</div>
-				<div class="pdg-top20 col-lg-6">
+
+				<div class="text-justify col-lg-6 col-sm-12 col-md-12">	
+					<div class="col-lg-12">											
+						<div class="row">
+							<h3>Missão</h3>
+							<p>Satisfação de nossos clientes com qualidade e baixo custo.</p>
+						</div>
+						<div class="row pdg-top10">
+							<h3>Sobre nós</h3>
+							<p>A Trans FFer é uma empresa com mais de 30 anos de serviços prestados no ramo de transporte de passageiros, com qualidade, pontualidade e baixo custo atuando com destino para qualquer local do país.</p>
+						</div>
+						<div class="row pdg-top10">
+							<h3>Serviços</h3>
+							<p>Alguns dos serviços oferecidos pela Trans FFer são:</p>
+							<ul>
+								<li>Transportes de Funcionários;</li>
+								<li>Transportes de Carga;</li>
+								<li>Traslados (Aeroportos, portos, etc.);</li>
+								<li>Deslocamento com Vans;</li>
+								<li>Serviço de Transporte Executivo;</li>
+								<li>Elaboração de itinerários, entre outros;</li>
+								<li>Atendimento 24hs.</li>
+							</ul>
+						</div>
+					</div>		
+				</div>	
+			
+
+				<div class="col-lg-6 col-sm-12 col-md-12">
 					<div class="row">
-						<img src="img/logo.png" alt="Logo-quemsomos">
+						<h3>Parceiros</h3>
 					</div>
-				</div>												
-			</div>
+					<div class="pdg-top10 col-lg-12 col-sm-12 col-md-12">
+						<div class="col-lg-4 col-sm-2 col-md-2">	
+							<img src="img/parceiros/rexam.jpg" alt="Logo-parceiro">
+						</div>
+
+						<div class="col-lg-4 col-sm-2 col-md-2">	
+							<img src="img/parceiros/ambev.jpg" alt="Logo-parceiro">
+						</div>	
+
+						<div class="col-lg-4 col-sm-2 col-md-2">	
+							<img src="img/parceiros/cebrace.jpg" alt="Logo-parceiro">
+						</div>	
+
+						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
+							<img src="img/parceiros/monsanto.jpg" alt="Logo-parceiro">
+						</div>	
+
+						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
+							<img src="img/parceiros/socksco.jpg" alt="Logo-parceiro">
+						</div>	
+
+						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
+							<img src="img/parceiros/jsl.png" alt="Logo-parceiro">
+						</div>	
+
+						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
+							<img src="img/parceiros/cipolatti.jpg" alt="Logo-parceiro">
+						</div>	
+
+						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
+							<img src="img/parceiros/dow.jpg" alt="Logo-parceiro">
+						</div>																							
+					</div>						
+				</div>	
+			</div>		
 		</div>
-		
+
 		<!-- PAG FROTA -->
-		<div class="pagBox-common nopadding-l cinza-claro col-lg-12" id="frota">
-			<div class="fixermenu col-lg-12"></div>
-			<h1>FROTA</h1>
-		</div>
+		<div class="pagBox-default nopadding-l cinza-escuro col-lg-12" id="frota">
+			<div class="fixermenu col-lg-12 col-sm-12 col-md-12 nopadding">
+				<div class="fixerseta col-lg-6 col-sm-6 col-md-6"></div>
+				<div class="fixerseta1 col-lg-6 col-sm-6 col-md-6"></div>				
+			</div>
+			<div class="container">
+				<h1>FROTA</h1>
+				<div class="col-lg-12 col-sm-12 col-md-12" id="frota-tumb">
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/captiva.jpg">
+					</div>
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/cruze.jpg">
+					</div>	
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/fluence.jpg">
+					</div>	
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/vectra.jpg">
+					</div>	
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/master.jpg">
+					</div>																								
+				</div>
+
+				<div class="col-lg-12 slide-frota">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner" role="listbox">
+							<div class="item active align-center">
+								<img src="img/carros/captivaslide.png">
+							</div>
+							<div class="item">
+								<img src="img/carros/cruzeslide.png">
+							</div>
+							<div class="item">
+								<img src="img/carros/fluenceslide.png">
+							</div>
+							<div class="item">
+								<img src="img/carros/vectraslide.png">
+							</div>
+							<div class="item">
+								<img src="img/carros/masterslide.png">
+							</div>							
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>	
 
 		<!-- PAG CONTACT -->
-		<div class="pagBox-common nopadding-l cinza-claro col-lg-12" id="faleconosco">
-			<div class="fixermenu col-lg-12"></div>
+		<div class="pagBox-default nopadding-l cinza-escuro col-lg-12" id="faleconosco">
+			<div class="fixermenu col-lg-12 col-sm-12 col-md-12  nopadding">
+				<div class="fixerseta col-lg-6 col-sm-6 col-md-6"></div>
+				<div class="fixerseta1 col-lg-6 col-sm-6 col-md-6"></div>				
+			</div>
 			<div class="container">
-				<div class="pdg-top20 col-lg-6">
+				<div class="pdg-top20 col-lg-6 col-sm-6 col-md-6">
 					<div class="row">
-						<div class="pdg-top20 col-lg-2">
-							<i class="fa fa-phone" aria-hidden="true"></i>
+						<div class="col-lg-2">
+							<i class="fa fa-phone align-center" aria-hidden="true"></i>
 						</div>
-						<div class="col-lg-10">
-							<div class="row">						
-								<h1>Telefones</h1>
-								<h4>(12) 3958-3447 24hs de Segunda a Domingo.</h4>
-							</div>
+						<div class="pdg-top10 col-lg-10">						
+							<h3>Telefones:</h3>
+							<p>(12) 3958-3447 24hs de Segunda a Domingo.</p>
 						</div>	
 					</div>
 
 					<div class="row pdg-top20">
-						<div class="pdg-top20 col-lg-2">
-							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						<div class="col-lg-2">
+							<i class="fa fa-envelope-o align-center" aria-hidden="true"></i>
 						</div>
-						<div class="col-lg-10">
-							<div class="row">												
-								<h1>Email para agendamento</h1>
-								<h4>agendamento@transffer.com.br</h4>
-							</div>
+						<div class="pdg-top10 col-lg-10">												
+							<h3>Email para agendamento:</h3>
+							<p>agendamento@transffer.com.br</p>
 						</div>								
 					</div>
 					
-					<div class="row pdg-top20">
-						<div id="mapa">map</div>
+					<div class="row">
+						<div id="map">map</div>
 					</div>	
 				</div>
-				<div class="pdg-top20 col-lg-6">
+				
+				<div class="pdg-top20 col-lg-6 col-sm-6 col-md-6">
 					<div class="row">
-						<div class="pdg-top20 col-lg-2">
-							<i class="fa fa-share" aria-hidden="true"></i>
+						<div class="col-lg-2">
+							<i class="fa fa-share align-center" aria-hidden="true"></i>
 						</div>		
-						<div class="col-lg-10">
-							<div class="row">									
-								<h1>Fale conosco</h1>
-								<h4>Central 24Hrs atendendo emails:</h4>
-							</div>
+						<div class="pdg-top10 col-lg-10">									
+							<h3>Fale conosco</h3>
+							<p>Central 24Hrs atendendo emails:</p>
 						</div>									
-					</div>					
+					</div>	
 				</div>									
 			</div>	
-		</div>		
+		</div>			
 
 		<!-- RODAPÉ -->
 		<div class="footer"></div>

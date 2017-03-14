@@ -1,7 +1,7 @@
 {
   "name": "TransFFer",
   "version": "1.0.0",
-  "description": "Project Trans FFer site and control system",
+  "description": "Project TransFFer site",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
   "devDependencies": {
     "bower": "~1.3.12",
     "grunt": "^0.4.5",
+    "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-connect": "^0.11.2",
     "grunt-contrib-jshint": "^0.11.3",
     "sqlite-sync": "^0.1.10"

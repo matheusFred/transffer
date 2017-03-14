@@ -1,22 +1,22 @@
-			/***************************************/
-			/***** OPÇÕES DEFAULT SITE CONFIG ******/ 
-			/***************************************/
+/***************************************/
+/***** OPÇÕES DEFAULT SITE CONFIG ******/ 
+/***************************************/
 
-p    {margin:0px;color: #ccc;}
-h1   {color: #999;}
-h4   {color: #ccc;}
-body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
+body{z-index: 0;background-color:#C7C5C8; font-family: 'Roboto', sans-serif;}
 
+h1{color: #415b70 !important;}
+h3{color: #ECEAED; margin: 0px !important}
+h4{color: #415b70; margin-top: 5px !important;}
+p, ul{ font-size: 14px; color: #D5D3D6; font-weight:bold; margin-bottom: 0px!important;}
 
-			/***************************************/
-			/***** OPÇÕES DEFAULT UTILITÁRIOS ******/
-			/***************************************/
+/***** OPÇÕES DEFAULT UTILITÁRIOS ******/
 
+.nopadding  { padding: 0px !important;}
 .nopadding-l{ padding-left:0px;padding-right:0px; }
-.nopadding-h{ padding-top:0px;padding-bottom: 0px;}
 
-.nomargin-l{ margin-left:0px;margin-right:0px; }
-.nomargin-h{ margin-top:0px;margin-bottom:0px; }
+.cinza-claro{ background-color:#C7C5C8; }
+.cinza-escuro{ background-color:#969497; }
+.cinza-escuro1{	background-color:#a4a2a5; }
 
 .pdg-top5 {padding-top:  5px;}
 .pdg-top10{padding-top: 10px;}
@@ -24,104 +24,156 @@ body {z-index: 0;background-color:#2C2E2F; font-family: 'Roboto', sans-serif;}
 .pdg-top20{padding-top: 20px;}
 .pdg-top40{padding-top: 40px;}
 
-			/***************************************/
-			/***** OPÇÕES DEFAULT PAGE BOXES ******/
-			/***************************************/
+.align-center{
+	text-align:center;
+	align-content:center;
+}
+
+/***************************************/
+/******** OPÇÕES DEFAULT MENU **********/
+/***************************************/
 
 .header-menu{
 	z-index: 10;
-	height: 100px;
-	position:fixed;
-	border-top: 3px solid #B78F66;
+	height: 35px;
+	position:fixed !important;
+	border-bottom: 2px solid #415b70; 
 	background-image: url(../img/pattern.png);
 }
 
-.pagBox-index{
-	min-height: 230px;
-	background-image: url(../img/pattern.png);
-}
-
-.pagBox-common{
-	min-height: 665px;
-	background-image: url(../img/pattern.png);
-}
-
-.fixermenu{
-	height:100px;
-}
-
-#mapa{ 
-  height: 250px; 
-  border: 1px solid #ccc;
+.header-logo img{
+    height: 37px;
+	width: 450px;
+	background-position:center;
+	padding: 0px 10px 12px 5px;
 }
 
 
-			/***************************************/
-			/**** OPÇÕES DEFAULT BANNER CONTENT ****/
-			/***************************************/
-
-.district{
-	margin-top: -30px;
-	height: 32px;
-	border-bottom:3px solid #B78F66;
-}
-
-.seta{ 
-	border-right: 50px solid transparent; 
-	border-bottom: 30px solid #2C2E2F;
-	opacity: 0.7;
-}
-.seta1{ 
-	border-left: 50px solid transparent; 
-	border-bottom: 30px solid #2C2E2F;
-	opacity: 0.7;
-}
-
-			/***************************************/
-			/*****   OPÇÕES DEFAULT BUTTONS   ******/
-			/***************************************/
+/****  OPÇÕES DEFAULT BUTTOM MENU   ****/
 
 .simple-button{
 	cursor:pointer;
-	padding: 30px 45px;
-	font-size: 18px;
 	font-weight: bold;
 	border-radius: 0px;
-	transition: color 0.5s;
+	transition: color 0.3s;	
 } 
+.simple-button h4:hover{ color: #415b70; transition: 0.5s}
 
-.simple-button:hover{ color: #5F5F5F; }
 
-.button-large{ padding: 30px 20px; }
+/***************************************/
+/*******  OPÇÕES SLIDE CURTAIN  ********/
+/***************************************/
 
-			/***************************************/
-			/******** OPÇÕES DEFAULT CORES *********/
-			/***************************************/ 
+.curtain-slide{
+	height: 32px;
+	margin-top: -30px;
+	border-bottom:3px solid #415b70;
+}
 
-.cinza-claro{ background-color:#4D4E4F; }
-.cinza-escuro{ background-color:#2C2E2F; }
-.laranja-claro{	background-color:#B78F66; }
+.curtain-left{ 
+	opacity: 0.7;
+	border-bottom: 30px solid #C7C5C8;
+	border-right: 50px solid transparent; 
+}
+.curtain-right{ 
+	opacity: 0.7;
+	border-bottom: 30px solid #C7C5C8;
+	border-left: 50px solid transparent; 
+}
+
+
+/***************************************/
+/******** OPÇÕES DEFAULT PAGES *********/
+/***************************************/
+
+.pagBox-default{
+	height: 665px;
+	background-image: url();
+	border-bottom:3px solid #415b70;
+}
+
+div#sobrenos img {
+    height: 150px;
+    width: 150px;
+    opacity: 0.5;
+}
+
+div#sobrenos img:hover{
+	opacity: 1;
+	transition: 0.5s;
+}
+
+div#frota-tumb img {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+/****** OPÇÕES DEFAULT PAGE INDEX ******/
+
+.pagBox-index{
+	height: 300px;
+	text-align: center;
+	border-bottom:3px solid #415b70;
+	background-image: url(../img/pattern.png);
+}
+
+.pagBox-index i.fa {
+	opacity: 0.8;
+    color: #a4a2a5;
+	font-size: 150px;
+}
+
+.pagBox-index i.fa:hover{
+	opacity: 1;
+	color: #415b70;
+	transition: 0.5s;
+}
+
+
+.slide-frota{
+	height: 300px;
+	text-align: center;
+	background-image: url(../img/pattern.png);
+}
+
+.slide-frota img{
+	height: 400px;
+	width: 500px;
+}
+
+/***************************************/
+/** OPÇÕES DEFAULT FIXER MENU CONTENT **/
+/***************************************/
+
+.fixermenu{
+	height:35px;
+	background:#415b70; 
+}
+
+.fixerseta{ 
+	border-right: 35px solid transparent; 
+	border-bottom: 35px solid #969497;
+}
+
+.fixerseta1{ 
+	border-left: 35px solid transparent; 
+	border-bottom: 35px solid #969497;
+}
 
 
 /***************************************/
 /************* ESPECIFICAS *************/
 /***************************************/ 
-div#faleconosco i { text-align:center; }
-
-div#homeicons i.fa {
-    color: #ccc;
-	font-size: 150px;
-	display: inline-block;
-}
 
 div#faleconosco i.fa {
     width: 100%;
-    color: #2C2E2F;
+    color: #ABA9AC;
 	font-size: 65px;
-	display: inline-block;
 }
 
-div#sobrenos ul{
-	color: #ccc;
-	font-size:17px;
+#map{ 
+  height: 250px; 
+  margin: 30px;
+  border: 1px solid #ccc;
 }
