@@ -3,11 +3,12 @@
 /***************************************/
 
 body{z-index: 0;background-color:#C7C5C8; font-family: 'Roboto', sans-serif;}
-
 h1{color: #415b70 !important;}
+h2{color: #e6e6e6 !important;}
 h3{color: #ECEAED; margin: 0px !important}
 h4{color: #415b70; margin-top: 5px !important;}
-p, ul{ font-size: 14px; color: #D5D3D6; font-weight:bold; margin-bottom: 0px!important;}
+p {padding-left: 10px;} 
+p,ul{ font-size: 14px; color: #e6e6e6; font-weight:bold; margin-bottom: 0px!important;}
 
 /***** OPÇÕES DEFAULT UTILITÁRIOS ******/
 
@@ -16,7 +17,6 @@ p, ul{ font-size: 14px; color: #D5D3D6; font-weight:bold; margin-bottom: 0px!imp
 
 .cinza-claro{ background-color:#C7C5C8; }
 .cinza-escuro{ background-color:#969497; }
-.cinza-escuro1{	background-color:#a4a2a5; }
 
 .pdg-top5 {padding-top:  5px;}
 .pdg-top10{padding-top: 10px;}
@@ -38,7 +38,6 @@ p, ul{ font-size: 14px; color: #D5D3D6; font-weight:bold; margin-bottom: 0px!imp
 	height: 35px;
 	position:fixed !important;
 	border-bottom: 2px solid #415b70; 
-	background-image: url(../img/pattern.png);
 }
 
 .header-logo img{
@@ -57,48 +56,30 @@ p, ul{ font-size: 14px; color: #D5D3D6; font-weight:bold; margin-bottom: 0px!imp
 	border-radius: 0px;
 	transition: color 0.3s;	
 } 
-.simple-button h4:hover{ color: #415b70; transition: 0.5s}
-
-
-/***************************************/
-/*******  OPÇÕES SLIDE CURTAIN  ********/
-/***************************************/
-
-.curtain-slide{
-	height: 32px;
-	margin-top: -30px;
-	border-bottom:3px solid #415b70;
+.simple-button h4:hover{ 
+	color: #415b70; 
+	transition: 0.5s
 }
 
-.curtain-left{ 
-	opacity: 0.7;
-	border-bottom: 30px solid #C7C5C8;
-	border-right: 50px solid transparent; 
-}
-.curtain-right{ 
-	opacity: 0.7;
-	border-bottom: 30px solid #C7C5C8;
-	border-left: 50px solid transparent; 
-}
-
-
 /***************************************/
-/******** OPÇÕES DEFAULT PAGES *********/
+/******** OPÇÕES DEFAULT IMG'S *********/
 /***************************************/
 
-.pagBox-default{
-	height: 665px;
-	background-image: url();
-	border-bottom:3px solid #415b70;
+.sobrenos-img img{
+	height: 200px;
 }
 
-div#sobrenos img {
+.frota-img img{
+	height: 400px;
+}
+
+div#parceiros img {
     height: 150px;
     width: 150px;
     opacity: 0.5;
 }
 
-div#sobrenos img:hover{
+div#parceiros img:hover{
 	opacity: 1;
 	transition: 0.5s;
 }
@@ -107,39 +88,63 @@ div#frota-tumb img {
     height: 150px;
     width: 150px;
     margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+div#frota-tumb img:hover{
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.slide-frota img{
+	width: 500px;
+	height: 400px;
+}
+
+.pattern{
+	background-image: url(../img/pattern.png);
+}
+
+/***************************************/
+/******** OPÇÕES DEFAULT PAGES *********/
+/***************************************/
+
+.pagBox-default{
+	height: 625px;
+	background-image: url();
+	border-bottom:3px solid #415b70;
+	background-image: linear-gradient(to top, black -50%,#969497 30%);
 }
 
 /****** OPÇÕES DEFAULT PAGE INDEX ******/
 
 .pagBox-index{
-	height: 300px;
+	height: 590px;
 	text-align: center;
+	background-position: center;
+	background-blend-mode: multiply;
 	border-bottom:3px solid #415b70;
-	background-image: url(../img/pattern.png);
+	background-image: linear-gradient(to top, black 15%,white 100%), url(../img/home.png);
+}
+
+.pagBox-index-object{
+	height: 190px;
 }
 
 .pagBox-index i.fa {
-	opacity: 0.8;
-    color: #a4a2a5;
-	font-size: 150px;
+    color: #415b70;
+	font-size: 120px;
 }
 
 .pagBox-index i.fa:hover{
-	opacity: 1;
-	color: #415b70;
-	transition: 0.5s;
+	color: #e6e6e6;
 }
 
+/****** OPÇÕES DEFAULT SLIDE FROTA ******/
 
 .slide-frota{
-	height: 300px;
+	height: 330px;
 	text-align: center;
-	background-image: url(../img/pattern.png);
-}
-
-.slide-frota img{
-	height: 400px;
-	width: 500px;
 }
 
 /***************************************/
@@ -152,15 +157,14 @@ div#frota-tumb img {
 }
 
 .fixerseta{ 
-	border-right: 35px solid transparent; 
 	border-bottom: 35px solid #969497;
+	border-right: 35px solid transparent; 
 }
 
 .fixerseta1{ 
-	border-left: 35px solid transparent; 
 	border-bottom: 35px solid #969497;
+	border-left: 35px solid transparent; 
 }
-
 
 /***************************************/
 /************* ESPECIFICAS *************/

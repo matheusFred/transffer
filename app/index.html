@@ -1,22 +1,21 @@
 <html ng-app="transfferApp">
 	<head>
 		<title>Transffer Executivo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/scriptyAtom.css" />
+		<link rel="stylesheet" href="css/scriptyAtom-mobile.css" />
 		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="lib/angular-carousel/dist/angular-carousel.min.css"  type="text/css" />
 
 		<!-- BIBLIOTECAS DEPENDENCIAS -->
 		<script src="lib/jquery/dist/jquery.min.js"></script>
 		<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script async defer 
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARwFYwR7qYJMbMkxOwFszkUNBTAH_WDBI&callback=initMap">
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARwFYwR7qYJMbMkxOwFszkUNBTAH_WDBI">
 		</script>
 
-		<script src="lib/angular/angular.min.js"></script>
-		<script src="lib/angular-touch/angular-touch.js"></script>
-		<script src="lib/angular-carousel/dist/angular-carousel.js"></script>	
+		<script src="lib/angular/angular.min.js"></script>	
 		<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 		<!-- ANGULAR CONTROLLERS -->
@@ -29,13 +28,14 @@
 
 	<body ng-controller="indexCtrl"  id="home" >
 		<!-- MENU -->
-		<div class="header-menu pdg-top5 cinza-claro nopadding-l col-md-12 col-sm-12 col-lg-12">
+		<div class="header-menu pattern pdg-top5 cinza-claro nopadding-l col-md-12 col-sm-12 col-lg-12">
 		    <div class="header-logo col-lg-6 col-sm-6" id="logo">
 	    		<div class="row">
 	    			<img src="img/logo.png" alt="Logo-menu">
 	    		</div>
 			</div>
-			<div class="col-lg-6 col-sm-6 col-md-6" id="navbar">
+
+			<div class="col-lg-6 invisible-tablet" id="navbar">
 				<div class="row align-center">
 					<div class="simple-button col-lg-3 col-sm-3" ui-sref="home">
 						<h4>Home</h4>
@@ -53,75 +53,58 @@
 			</div>
 		</div>	
 		
-		<!-- FIXER MENU / SLIDE -->
+		<!-- FIXER MENU -->
 		<div class="nopadding-l fixermenu col-lg-12 col-sm-12 col-md-12"></div>
 	
-		<!-- SLIDE SHOW HOME -->
-		<div class="nopadding col-lg-12">
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<img src="img/slide/fundoslide.jpg">
-					</div>
-					<div class="item">
-						<img src="img/slide/fundoslide3.jpg">
-					</div>
-				</div>
-
-				<div class="curtain-slide nopadding col-lg-12 col-sm-12 col-md-12">		
-					<div class="col-lg-6 col-sm-6 col-md-6 curtain-left"></div>
-					<div class="col-lg-6 col-sm-6 col-md-6 curtain-right"></div>
-				</div>	
-			</div>			
-		</div>
-	
-		<!-- HOME-ICONS -->
-		<div class="pagBox-index cinza-claro col-lg-12" id="homeicons">
-			<div class="col-lg-12">
-				<div class="row">
-					<h1>Seja bem vindo a TransFFer, transporte executivo:</h1>
-				</div>
-			</div>
-			<div class="col-lg-12">
-				<div class="row pdg-top20">
-					<div class="col-lg-4 col-sm-4 col-md-4" ui-sref="sobre-nos">
-						<i class="fa fa-users" aria-hidden="true"></i>
+		<!-- PAG HOME -->
+		<div class="pagBox-index col-lg-12" id="homeicons">
+			<div class="row">
+				<div class="container">
+					<div class="pagBox-index-object col-lg-12">
+						<h1>Bem Vindo!</h1>
 					</div>
 
-					<div class="col-lg-4 col-sm-4 col-md-4" ui-sref="frota">
-						<i class="fa fa-car" aria-hidden="true"></i>
-					</div>
+					<div class="pagBox-index-object col-lg-12 col-sm-12 col-md-12 pdgtop10-tablet">
+						<div class="row pdgtop10-tablet">
+							<div class="col-lg-4 col-sm-4 col-md-4 pdgtop10-tablet" ui-sref="sobre-nos">
+								<i class="fa fa-users" aria-hidden="true"></i>
+							</div>
 
-					<div class="col-lg-4 col-sm-4 col-md-4" ui-sref="fale-conosco">
-						<i class="fa fa-envelope-o" aria-hidden="true"></i>	
-					</div>					
+							<div class="col-lg-4 col-sm-4 col-md-4 pdgtop10-tablet" ui-sref="frota">
+								<i class="fa fa-car" aria-hidden="true"></i>
+							</div>
+
+							<div class="col-lg-4 col-sm-4 col-md-4 pdgtop10-tablet" ui-sref="fale-conosco">
+								<i class="fa fa-envelope-o" aria-hidden="true"></i>	
+							</div>					
+						</div>
+					</div>	
+
+					<div class="pagBox-index-object">
+						<h2>Transporte Executiva Fernandes Ferreira é uma empresa com mais de 30 anos de serviços,com qualidade, pontualidade e baixo custo atuando com destino para qualquer local do país.</h2>	
+					</div>																
 				</div>
-			</div>				
-		</div>
+			</div>						
+		</div>		
 
 		<!-- PAG SOBRE NÓS -->
-		<div class="pagBox-default nopadding-l cinza-escuro col-lg-12" id="sobrenos">
+		<div class="pagBox-default nopadding-l cinza-escuro col-lg-12 col-sm-12 col-md-12" id="sobrenos">
 			<div class="container">
 				<div class="fixermenu col-lg-12 col-sm-12 col-md-12 nopadding">
 					<div class="fixerseta col-lg-6 col-sm-6 col-md-6"></div>
 					<div class="fixerseta1 col-lg-6 col-sm-6 col-md-6"></div>
 				</div>	
 
-				<div class="row pdg-top40">
-					<h1>Sobre nós</h1>
-				</div>
-
-				<div class="text-justify col-lg-6 col-sm-12 col-md-12">	
+				<div class="text-justify col-lg-6 col-sm-6 col-md-12">	
+					<div class="row">
+						<h1>Sobre nós</h1>
+					</div>	
 					<div class="col-lg-12">											
 						<div class="row">
 							<h3>Missão</h3>
 							<p>Satisfação de nossos clientes com qualidade e baixo custo.</p>
 						</div>
-						<div class="row pdg-top10">
-							<h3>Sobre nós</h3>
-							<p>A Trans FFer é uma empresa com mais de 30 anos de serviços prestados no ramo de transporte de passageiros, com qualidade, pontualidade e baixo custo atuando com destino para qualquer local do país.</p>
-						</div>
-						<div class="row pdg-top10">
+						<div class="row pdg-top20">
 							<h3>Serviços</h3>
 							<p>Alguns dos serviços oferecidos pela Trans FFer são:</p>
 							<ul>
@@ -134,45 +117,48 @@
 								<li>Atendimento 24hs.</li>
 							</ul>
 						</div>
+						<div class="row sobrenos-img pdg-top10">
+							<img src="img/logotipo.png">
+						</div>
 					</div>		
 				</div>	
 			
 
-				<div class="col-lg-6 col-sm-12 col-md-12">
+				<div class="pdg-top20 col-lg-6 col-sm-6 col-md-12" id="parceiros">
 					<div class="row">
 						<h3>Parceiros</h3>
 					</div>
-					<div class="pdg-top10 col-lg-12 col-sm-12 col-md-12">
-						<div class="col-lg-4 col-sm-2 col-md-2">	
-							<img src="img/parceiros/rexam.jpg" alt="Logo-parceiro">
+					<div class="pdg-top10 col-lg-12 col-sm-12">
+						<div class="col-lg-4 col-sm-6 col-md-2">	
+							<img src="img/parceiros/rexam.jpg">
 						</div>
 
-						<div class="col-lg-4 col-sm-2 col-md-2">	
-							<img src="img/parceiros/ambev.jpg" alt="Logo-parceiro">
+						<div class="col-lg-4 col-sm-6 col-md-2">	
+							<img src="img/parceiros/ambev.jpg">
 						</div>	
 
-						<div class="col-lg-4 col-sm-2 col-md-2">	
-							<img src="img/parceiros/cebrace.jpg" alt="Logo-parceiro">
+						<div class="pdgtop10-tablet col-lg-4 col-sm-6 col-md-2">	
+							<img src="img/parceiros/cebrace.jpg">
 						</div>	
 
-						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
-							<img src="img/parceiros/monsanto.jpg" alt="Logo-parceiro">
+						<div class="pdg-top10  col-lg-4 col-sm-6 col-md-2">	
+							<img src="img/parceiros/monsanto.jpg">
 						</div>	
 
-						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
-							<img src="img/parceiros/socksco.jpg" alt="Logo-parceiro">
+						<div class="pdg-top10  col-lg-4 col-sm-6 col-md-2">	
+							<img src="img/parceiros/socksco.jpg">
 						</div>	
 
-						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
-							<img src="img/parceiros/jsl.png" alt="Logo-parceiro">
+						<div class="pdg-top10  col-lg-4 col-sm-6 col-md-2">	
+							<img src="img/parceiros/jsl.png">
 						</div>	
 
-						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
-							<img src="img/parceiros/cipolatti.jpg" alt="Logo-parceiro">
+						<div class="pdg-top10  col-lg-4 col-sm-6 col-md-2">	
+							<img src="img/parceiros/cipolatti.jpg">
 						</div>	
 
-						<div class="pdg-top10  col-lg-4 col-sm-2 col-md-2">	
-							<img src="img/parceiros/dow.jpg" alt="Logo-parceiro">
+						<div class="pdg-top10  col-lg-4 col-sm-6 col-md-2">	
+							<img src="img/parceiros/dow.jpg">
 						</div>																							
 					</div>						
 				</div>	
@@ -186,26 +172,7 @@
 				<div class="fixerseta1 col-lg-6 col-sm-6 col-md-6"></div>				
 			</div>
 			<div class="container">
-				<h1>FROTA</h1>
-				<div class="col-lg-12 col-sm-12 col-md-12" id="frota-tumb">
-					<div class="col-lg-2 col-sm-2 col-md-2">	
-						<img src="img/carros/captiva.jpg">
-					</div>
-					<div class="col-lg-2 col-sm-2 col-md-2">	
-						<img src="img/carros/cruze.jpg">
-					</div>	
-					<div class="col-lg-2 col-sm-2 col-md-2">	
-						<img src="img/carros/fluence.jpg">
-					</div>	
-					<div class="col-lg-2 col-sm-2 col-md-2">	
-						<img src="img/carros/vectra.jpg">
-					</div>	
-					<div class="col-lg-2 col-sm-2 col-md-2">	
-						<img src="img/carros/master.jpg">
-					</div>																								
-				</div>
-
-				<div class="col-lg-12 slide-frota">
+				<div class="col-lg-6 col-sm-6 slide-frota">
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner" role="listbox">
 							<div class="item active align-center">
@@ -226,33 +193,58 @@
 						</div>
 					</div>
 				</div>	
+
+				<div class="frota-img align-center col-lg-6 col-sm-6 col-md-6">
+					<img src="img/logomarca.png" alt="">																		
+				</div>
+
+				<div class="col-lg-12 col-sm-12 col-md-6 pdgtop10-tablet" id="frota-tumb">
+					<div class="col-lg-1 col-sm-1"></div>
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/captiva.jpg">
+					</div>
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/cruze.jpg">
+					</div>	
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/fluence.jpg">
+					</div>	
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/vectra.jpg">
+					</div>	
+					<div class="col-lg-2 col-sm-2 col-md-2">	
+						<img src="img/carros/master.jpg">
+					</div>
+					<div class="col-lg-1 col-sm-1"></div>																								
+				</div>
+
 			</div>
 		</div>	
 
 		<!-- PAG CONTACT -->
 		<div class="pagBox-default nopadding-l cinza-escuro col-lg-12" id="faleconosco">
-			<div class="fixermenu col-lg-12 col-sm-12 col-md-12  nopadding">
+			<div class="fixermenu col-lg-12 col-sm-12 col-md-12 nopadding">
 				<div class="fixerseta col-lg-6 col-sm-6 col-md-6"></div>
 				<div class="fixerseta1 col-lg-6 col-sm-6 col-md-6"></div>				
 			</div>
 			<div class="container">
 				<div class="pdg-top20 col-lg-6 col-sm-6 col-md-6">
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-2 col-sm-2">
 							<i class="fa fa-phone align-center" aria-hidden="true"></i>
 						</div>
-						<div class="pdg-top10 col-lg-10">						
+						<div class="pdg-top10 nopadding-l col-lg-10 col-sm-10">						
 							<h3>Telefones:</h3>
 							<p>(12) 3958-3447 24hs de Segunda a Domingo.</p>
 						</div>	
 					</div>
 
 					<div class="row pdg-top20">
-						<div class="col-lg-2">
+						<div class="col-lg-2 col-sm-2">
 							<i class="fa fa-envelope-o align-center" aria-hidden="true"></i>
 						</div>
-						<div class="pdg-top10 col-lg-10">												
-							<h3>Email para agendamento:</h3>
+						<div class="pdg-top10 nopadding-l col-lg-10 col-sm-10">												
+							<h3>Email:</h3>
 							<p>agendamento@transffer.com.br</p>
 						</div>								
 					</div>
@@ -264,10 +256,10 @@
 				
 				<div class="pdg-top20 col-lg-6 col-sm-6 col-md-6">
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-2 col-sm-2">
 							<i class="fa fa-share align-center" aria-hidden="true"></i>
 						</div>		
-						<div class="pdg-top10 col-lg-10">									
+						<div class="pdg-top10 nopadding-l col-lg-10 col-sm-10">									
 							<h3>Fale conosco</h3>
 							<p>Central 24Hrs atendendo emails:</p>
 						</div>									

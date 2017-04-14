@@ -1,0 +1,56 @@
+@media only screen and (max-width: 800px) {
+	.invisible-tablet{
+		visibility: hidden;
+		display: none;
+	}
+
+	.header-logo img{
+		width: initial;
+	}
+
+	.pagBox-index,
+	.pagBox-default{
+		height: 540px;
+	}
+
+	.pdgtop10-tablet{
+		padding-top: 10px;
+	}
+
+	div#parceiros img {
+	    height: 100px;
+	    width: 140px;
+	    opacity: 0.8;
+	}
+
+	.slide-frota{
+		height: 280px;
+	}
+
+	div#frota-tumb img {
+	    height: 105px;
+	    width: 105px;
+	    margin-top: 25px;
+	}
+
+	.pagBox-index i.fa {
+		height: 205px;
+	}
+
+	.frota-img img{
+		height: 280px;
+	}
+
+	.pagBox-index-object{
+		height: 100px;
+	}
+
+	.sobrenos-img img{
+		height: 120px;
+	}	
+
+	div#faleconosco i.fa {
+		font-size: 55px;
+	}
+
+}
