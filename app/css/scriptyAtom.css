@@ -1,22 +1,23 @@
 /***************************************/
-/***** OPÇÕES DEFAULT SITE CONFIG ******/ 
+/***** OPÇÕES DEFAULT SITE CONFIG ******/
 /***************************************/
 
-body{z-index: 0;background-color:#C7C5C8; font-family: 'Roboto', sans-serif;}
-h1{color: #415b70 !important;}
-h2{color: #e6e6e6 !important;}
-h3{color: #ECEAED; margin: 0px !important}
-h4{color: #415b70; margin-top: 5px !important;}
-p {padding-left: 10px;} 
-p,ul{ font-size: 14px; color: #e6e6e6; font-weight:bold; margin-bottom: 0px!important;}
+body{z-index: 0; font-family: 'Roboto', sans-serif;}
+
+h1{color: #415b70 !important; text-decoration: underline;}
+h2{color: #e6e6e6 !important; margin-top: 5px;}
+
+h3,h4{color: #415b70; margin-top: 5px !important; margin-bottom: 0px !important;}
+
+p,ul{ font-size: 14px; color: #e6e6e6; margin-bottom: 0px!important;}
 
 /***** OPÇÕES DEFAULT UTILITÁRIOS ******/
 
 .nopadding  { padding: 0px !important;}
 .nopadding-l{ padding-left:0px;padding-right:0px; }
 
-.cinza-claro{ background-color:#C7C5C8; }
-.cinza-escuro{ background-color:#969497; }
+.cinza-claro{ background-color:#b9b7b9; }
+.cinza-escuro{ background-color:#a0a0a0; }
 
 .pdg-top5 {padding-top:  5px;}
 .pdg-top10{padding-top: 10px;}
@@ -29,36 +30,49 @@ p,ul{ font-size: 14px; color: #e6e6e6; font-weight:bold; margin-bottom: 0px!impo
 	align-content:center;
 }
 
+.vtopem{
+	top: 30%;
+  transform: translateY(-100%);
+}
+
+.vmiddle{
+	top: 35%;
+  transform: translateY(-100%);
+}
+
+.vbottom{
+	top: 55%;
+  transform: translateY(-100%);
+}
+
 /***************************************/
 /******** OPÇÕES DEFAULT MENU **********/
 /***************************************/
 
 .header-menu{
 	z-index: 10;
-	height: 35px;
+	height: 45px;
 	position:fixed !important;
-	border-bottom: 2px solid #415b70; 
+	border-bottom: 2px solid #415b70;
 }
-
-.header-logo img{
-    height: 37px;
-	width: 450px;
-	background-position:center;
-	padding: 0px 10px 12px 5px;
-}
-
-
-/****  OPÇÕES DEFAULT BUTTOM MENU   ****/
 
 .simple-button{
 	cursor:pointer;
-	font-weight: bold;
+	font-weight: 300;
 	border-radius: 0px;
-	transition: color 0.3s;	
-} 
-.simple-button h4:hover{ 
-	color: #415b70; 
+	transition: color 0.3s;
+}
+
+.simple-button:hover h4{
+	color: #ECEAED !important;
 	transition: 0.5s
+}
+
+.footer{
+	z-index: 10;
+	height: 150px;
+	top: 10%;
+	border-top: 2px solid #415b70;
 }
 
 /***************************************/
@@ -67,42 +81,30 @@ p,ul{ font-size: 14px; color: #e6e6e6; font-weight:bold; margin-bottom: 0px!impo
 
 .sobrenos-img img{
 	height: 200px;
+	opacity: 0.7;
 }
 
-.frota-img img{
-	height: 400px;
+.footer-img img{
+	height: auto;
 }
 
 div#parceiros img {
-    height: 150px;
-    width: 150px;
-    opacity: 0.5;
-}
-
-div#parceiros img:hover{
-	opacity: 1;
-	transition: 0.5s;
+    height: 80px;
+    width: 80px;
+    opacity: 0.7;
 }
 
 div#frota-tumb img {
-    height: 150px;
-    width: 150px;
-    margin-bottom: 30px;
-    opacity: 0.8;
+    height: 80px;
+    width: 80px;
+    opacity: 0.7;
 }
 
-div#frota-tumb img:hover{
-	opacity: 1;
-	transition: 0.5s;
-}
-
-.slide-frota img{
-	width: 500px;
-	height: 400px;
-}
-
-.pattern{
-	background-image: url(../img/pattern.png);
+.header-logo img{
+  height: 37px;
+	width: 450px;
+	background-position:center;
+	padding: 0px 10px 12px 5px;
 }
 
 /***************************************/
@@ -113,10 +115,7 @@ div#frota-tumb img:hover{
 	height: 625px;
 	background-image: url();
 	border-bottom:3px solid #415b70;
-	background-image: linear-gradient(to top, black -50%,#969497 30%);
 }
-
-/****** OPÇÕES DEFAULT PAGE INDEX ******/
 
 .pagBox-index{
 	height: 590px;
@@ -124,27 +123,12 @@ div#frota-tumb img:hover{
 	background-position: center;
 	background-blend-mode: multiply;
 	border-bottom:3px solid #415b70;
-	background-image: linear-gradient(to top, black 15%,white 100%), url(../img/home.png);
-}
+	background-image: linear-gradient(to top, black 10%,white 100%), url(../img/logos/home.png);
 
-.pagBox-index-object{
-	height: 190px;
-}
-
-.pagBox-index i.fa {
-    color: #415b70;
-	font-size: 120px;
-}
-
-.pagBox-index i.fa:hover{
-	color: #e6e6e6;
-}
-
-/****** OPÇÕES DEFAULT SLIDE FROTA ******/
-
-.slide-frota{
-	height: 330px;
-	text-align: center;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 /***************************************/
@@ -153,31 +137,37 @@ div#frota-tumb img:hover{
 
 .fixermenu{
 	height:35px;
-	background:#415b70; 
+	background:#415b70;
 }
 
-.fixerseta{ 
-	border-bottom: 35px solid #969497;
-	border-right: 35px solid transparent; 
+.fixerseta{
+	border-bottom: 35px solid #b9b7b9;
+	border-right: 35px solid transparent;
 }
 
-.fixerseta1{ 
-	border-bottom: 35px solid #969497;
-	border-left: 35px solid transparent; 
+.fixerseta1{
+	border-bottom: 35px solid #b9b7b9;
+	border-left: 35px solid transparent;
 }
 
 /***************************************/
 /************* ESPECIFICAS *************/
-/***************************************/ 
+/***************************************/
 
 div#faleconosco i.fa {
     width: 100%;
     color: #ABA9AC;
-	font-size: 65px;
+	  font-size: 65px;
 }
 
-#map{ 
-  height: 250px; 
+.slide-frota #myCarousel{
+	height: 330px;
+	border-bottom: 4px solid #415b70;
+	text-align: center;
+}
+
+#map{
+  height: 250px;
   margin: 30px;
   border: 1px solid #ccc;
 }

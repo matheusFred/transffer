@@ -1,4 +1,4 @@
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
 	.invisible-tablet{
 		visibility: hidden;
 		display: none;
@@ -8,49 +8,75 @@
 		width: initial;
 	}
 
-	.pagBox-index,
 	.pagBox-default{
-		height: 540px;
-	}
-
-	.pdgtop10-tablet{
-		padding-top: 10px;
+		height: 550px;
 	}
 
 	div#parceiros img {
-	    height: 100px;
-	    width: 140px;
-	    opacity: 0.8;
-	}
-
-	.slide-frota{
-		height: 280px;
+	  height: 50px;
+	  width: 50px;
 	}
 
 	div#frota-tumb img {
-	    height: 105px;
-	    width: 105px;
-	    margin-top: 25px;
+	  height: 50px;
+	  width: 50px;
 	}
 
-	.pagBox-index i.fa {
-		height: 205px;
-	}
-
-	.frota-img img{
-		height: 280px;
-	}
-
-	.pagBox-index-object{
-		height: 100px;
+	div#faleconosco i.fa {
+		font-size: 40px;
 	}
 
 	.sobrenos-img img{
-		height: 120px;
-	}	
+		height: 100px;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	.invisible-celphone{
+		visibility: hidden;
+		display: none;
+	}
+
+	.footer{
+		height: 200px;
+	}
+
+	.pagBox-default{
+		height: 800px;
+	}
+
+	div#parceiros img {
+	  height: 80px;
+	  width: 80px;
+	}
+
+	.slide-frota #myCarousel{
+		height: 250px;
+		border-bottom: 4px solid #415b70;
+		text-align: center;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+
+	.invisible-microcel{
+			visibility: hidden;
+			display: none;
+		}
 
 	div#faleconosco i.fa {
-		font-size: 55px;
+		font-size: 20px;
+	}
+
+	.micro-pdg{
+		padding-top: 10px;
+	}
+
+	div#frota-tumb img {
+		height: 35px;
+		width: 35px;
 	}
 
 }
