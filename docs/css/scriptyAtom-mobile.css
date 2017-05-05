@@ -8,6 +8,7 @@
 		width: initial;
 	}
 
+	.pagBox-index,
 	.pagBox-default{
 		height: 550px;
 	}
@@ -36,6 +37,10 @@
 	.invisible-celphone{
 		visibility: hidden;
 		display: none;
+	}
+
+	.pdg10-mobile{
+		padding-top: 10px;
 	}
 
 	.footer{

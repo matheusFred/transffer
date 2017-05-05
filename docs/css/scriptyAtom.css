@@ -31,17 +31,17 @@ p,ul{ font-size: 14px; color: #e6e6e6; margin-bottom: 0px!important;}
 }
 
 .vtopem{
-	top: 30%;
+	top: 25%;
   transform: translateY(-100%);
 }
 
 .vmiddle{
-	top: 35%;
+	top: 30%;
   transform: translateY(-100%);
 }
 
 .vbottom{
-	top: 55%;
+	top: 45%;
   transform: translateY(-100%);
 }
 
