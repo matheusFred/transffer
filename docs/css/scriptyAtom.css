@@ -1,0 +1,173 @@
+/***************************************/
+/***** OPÇÕES DEFAULT SITE CONFIG ******/
+/***************************************/
+
+body{z-index: 0; font-family: 'Roboto', sans-serif;}
+
+h1{color: #415b70 !important; text-decoration: underline;}
+h2{color: #e6e6e6 !important; margin-top: 5px;}
+
+h3,h4{color: #415b70; margin-top: 5px !important; margin-bottom: 0px !important;}
+
+p,ul{ font-size: 14px; color: #e6e6e6; margin-bottom: 0px!important;}
+
+/***** OPÇÕES DEFAULT UTILITÁRIOS ******/
+
+.nopadding  { padding: 0px !important;}
+.nopadding-l{ padding-left:0px;padding-right:0px; }
+
+.cinza-claro{ background-color:#b9b7b9; }
+.cinza-escuro{ background-color:#a0a0a0; }
+
+.pdg-top5 {padding-top:  5px;}
+.pdg-top10{padding-top: 10px;}
+.pdg-top15{padding-top: 15px;}
+.pdg-top20{padding-top: 20px;}
+.pdg-top40{padding-top: 40px;}
+
+.align-center{
+	text-align:center;
+	align-content:center;
+}
+
+.vtopem{
+	top: 30%;
+  transform: translateY(-100%);
+}
+
+.vmiddle{
+	top: 35%;
+  transform: translateY(-100%);
+}
+
+.vbottom{
+	top: 55%;
+  transform: translateY(-100%);
+}
+
+/***************************************/
+/******** OPÇÕES DEFAULT MENU **********/
+/***************************************/
+
+.header-menu{
+	z-index: 10;
+	height: 45px;
+	position:fixed !important;
+	border-bottom: 2px solid #415b70;
+}
+
+.simple-button{
+	cursor:pointer;
+	font-weight: 300;
+	border-radius: 0px;
+	transition: color 0.3s;
+}
+
+.simple-button:hover h4{
+	color: #ECEAED !important;
+	transition: 0.5s
+}
+
+.footer{
+	z-index: 10;
+	height: 150px;
+	top: 10%;
+	border-top: 2px solid #415b70;
+}
+
+/***************************************/
+/******** OPÇÕES DEFAULT IMG'S *********/
+/***************************************/
+
+.sobrenos-img img{
+	height: 200px;
+	opacity: 0.7;
+}
+
+.footer-img img{
+	height: auto;
+}
+
+div#parceiros img {
+    height: 80px;
+    width: 80px;
+    opacity: 0.7;
+}
+
+div#frota-tumb img {
+    height: 80px;
+    width: 80px;
+    opacity: 0.7;
+}
+
+.header-logo img{
+  height: 37px;
+	width: 450px;
+	background-position:center;
+	padding: 0px 10px 12px 5px;
+}
+
+/***************************************/
+/******** OPÇÕES DEFAULT PAGES *********/
+/***************************************/
+
+.pagBox-default{
+	height: 625px;
+	background-image: url();
+	border-bottom:3px solid #415b70;
+}
+
+.pagBox-index{
+	height: 590px;
+	text-align: center;
+	background-position: center;
+	background-blend-mode: multiply;
+	border-bottom:3px solid #415b70;
+	background-image: linear-gradient(to top, black 10%,white 100%), url(../img/logos/home.png);
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/***************************************/
+/** OPÇÕES DEFAULT FIXER MENU CONTENT **/
+/***************************************/
+
+.fixermenu{
+	height:35px;
+	background:#415b70;
+}
+
+.fixerseta{
+	border-bottom: 35px solid #b9b7b9;
+	border-right: 35px solid transparent;
+}
+
+.fixerseta1{
+	border-bottom: 35px solid #b9b7b9;
+	border-left: 35px solid transparent;
+}
+
+/***************************************/
+/************* ESPECIFICAS *************/
+/***************************************/
+
+div#faleconosco i.fa {
+    width: 100%;
+    color: #ABA9AC;
+	  font-size: 65px;
+}
+
+.slide-frota #myCarousel{
+	height: 330px;
+	border-bottom: 4px solid #415b70;
+	text-align: center;
+}
+
+#map{
+  height: 250px;
+  margin: 30px;
+  border: 1px solid #ccc;
+}
