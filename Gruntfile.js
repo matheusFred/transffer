@@ -5,10 +5,10 @@ module.exports = function(grunt){
     browserSync: {
       dev: {
           bsFiles: {
-              src : ['app/css/scriptyAtom.css','app/index.html','app/css/scriptyAtom-mobile.css']
+              src : ['docs/css/script.css','docs/index.html','docs/css/scriptyAtom-mobile.css']
           },
           options: {
-            server: './app'
+            server: './docs'
           }
       }
     }  

@@ -6,4 +6,4 @@
 /* Desenvolvido por Matheus Ferreira <maathe.f@gmail.com>
 /*
 /* ****************************************************** */
-var myVariableApp = angular.module('transfferApp', ['ui.router']);
+var myVariableApp = angular.module('transfferApp', ['slickCarousel']);

@@ -13,12 +13,9 @@
   ],
   "dependencies": {
     "font-awesome": "latest",
-    "angular-ui-router": "latest",
     "angular": "latest",
-    "bootstrap": "latest",
-    "jquery": "latest"
-  },
-  "devDependencies": {
-    "angular-carousel": "^1.0.1"
+    "bootstrap": "3.3.7",
+    "jquery": "latest",
+    "angular-slick-carousel": "^3.1.7"
   }
 }
